@@ -1,0 +1,15 @@
+@charset "utf-8";
+ 
+body {
+    text-align: center;
+	/*background-color: lavenderblush;*/
+	font-style: fantasy;
+	background-image: url(http://pic.prepics-cdn.com/airin167/26526357.jpeg);
+	font-family: cursive;
+}
+
+h1 {
+	color :#ff3399;
+	/*color: #ccccff;*/
+	/*background: white;*/
+}
