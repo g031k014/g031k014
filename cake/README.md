@@ -1,5 +1,9 @@
+
 g031k014
 =======
+
+
+<a href="http://offsidenow.phpapps.jp/">演習課題</a>
 
 第7回 課題
 =======
