@@ -7,11 +7,11 @@ g031k014
 	<li>
 		基礎課題１
 		<a href="http://49.212.46.130/~g031k014/cake/boards">動作ページ</a>
-		<a href="https://github.com/sasaki-takumi/g031k068/blob/master/cake/app/Controller/BoardsController.php">コード</a>
+		<a href="https://github.com/g031k014/g031k068/blob/master/cake/app/Controller/BoardsController.php">コード</a>
 	</li>
 	<li>
 		基礎課題２
-		<a href="">jQueryコード</a>
+		<a href="http://49.212.46.130/~g031k014/jquery7.html">jQueryコード</a>
 	</li>
 	<!-- <li>
 		発展課題1
@@ -34,8 +34,8 @@ g031k014
 	</li>
 	<li>
 		基礎課題２
-		<a href="http://49.212.46.130/~g031k068/g031k068/cake/Mushups">動作ページ</a>
-		<a href="https://github.com/sasaki-takumi/g031k068/blob/master/cake/app/Controller/MushupsController.php">コード</a>
+		<a href="http://49.212.46.130/~g031k014/cake/Mashups">動作ページ</a>
+		<a href="">コード</a>
 	</li>
 	<li>
 		基礎課題３
