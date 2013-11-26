@@ -6,14 +6,14 @@ g031k014
 <ul>
 	<li>
 		基礎課題１
-		<a href="http://49.212.46.130/~g031k068/g031k068/cake/boards">動作ページ</a>
+		<a href="http://49.212.46.130/~g031k014/cake/boards">動作ページ</a>
 		<a href="https://github.com/sasaki-takumi/g031k068/blob/master/cake/app/Controller/BoardsController.php">コード</a>
 	</li>
 	<li>
 		基礎課題２
-		<a href="http://49.212.46.130/~g031k068/g031k068/kadai7jQuery.html">jQueryコード</a>
+		<a href="">jQueryコード</a>
 	</li>
-	<li>
+	<!-- <li>
 		発展課題1
 		<a href="http://49.212.46.130/~g031k068/g031k068/cake/boards">動作ページ</a>
 		<a href="https://github.com/sasaki-takumi/g031k068/blob/master/cake/app/Controller/BoardsController.php">コード</a>
@@ -22,7 +22,7 @@ g031k014
 		発展課題2
 		<a href="http://49.212.46.130/~g031k068/g031k068/cake/entries">動作ページ</a>
 		<a href="https://github.com/sasaki-takumi/g031k068/blob/master/cake/app/Controller/EntriesController.php">コード</a>
-	</li>
+	</li> -->
 </ul>
 
 第6回 課題
@@ -30,7 +30,7 @@ g031k014
 <ul>
 	<li>
 		基礎課題１
-		<a href="http://49.212.46.130/~g031k068/g031k068/kadai6report.html">レポート</a>
+		<a href="http://49.212.46.130/~g031k014/IS6-1.pdf">レポート</a>
 	</li>
 	<li>
 		基礎課題２
@@ -44,11 +44,11 @@ g031k014
 	</li>
 	<li>
 		発展課題１
-		<a href="http://49.212.46.130/~g031k068/g031k068/kadai6img.html">画像</a>
+		<a href="http://dotinstall.com/users/g031k014">dotinstall</a>
 	</li>
 	<li>
 		発展課題２
-		<a href="http://49.212.46.130/~g031k068/g031k068/kadai6jQuery.html">jQueryコード</a>
+		<a href="http://49.212.46.130/~g031k014/jquery6.html">jQueryコード</a>
 	</li>
 </ul>
 
