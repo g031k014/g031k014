@@ -1,11 +1,6 @@
-<style>
-	b{
-		background: #ff3399;
-	}
-</style>
 
 
-<b>g031k014</b>
+g031k014
 =======
 
 
