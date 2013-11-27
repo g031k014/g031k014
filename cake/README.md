@@ -5,7 +5,7 @@ g031k014
 
 <!-- [![Cake](http://pic.prepics-cdn.com/airin167/26526357.jpeg)](http://www.nicovideo.jp/) -->
 
-[![Cake](http://49.212.46.130/~g031k014/kumash.PNG)](http://www.nicovideo.jp/)
+[![Cake](https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/c3.0.174.174/s160x160/1374850_1406804032886084_522700830_a.jpg)](http://www.nicovideo.jp/)
 
 
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
