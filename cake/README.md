@@ -3,6 +3,7 @@
 g031k014
 =======
 
+[![Cake](http://pic.prepics-cdn.com/airin167/26526357.jpeg)]
 
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
 
