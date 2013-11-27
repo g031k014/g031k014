@@ -3,7 +3,10 @@
 g031k014
 =======
 
-[![Cake](http://pic.prepics-cdn.com/airin167/26526357.jpeg)](http://www.nicovideo.jp/)
+<!-- [![Cake](http://pic.prepics-cdn.com/airin167/26526357.jpeg)](http://www.nicovideo.jp/) -->
+
+[![Cake](http://49.212.46.130/~g031k014/kumash.PNG)](http://www.nicovideo.jp/)
+
 
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
 
