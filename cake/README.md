@@ -4,11 +4,25 @@ g031k014
 
 <!-- [![Cake](http://pic.prepics-cdn.com/airin167/26526357.jpeg)](http://www.nicovideo.jp/) -->
 
-
 [![Cake](https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/c3.0.174.174/s160x160/1374850_1406804032886084_522700830_a.jpg)](http://www.nicovideo.jp/)
 
 
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
+
+
+第８回　課題
+======
+<ul>
+	<li>
+		基礎課題１
+		<a href="http://49.212.46.130/~g031k014/cake/boards">動作ページ</a>
+		<a href="">コード</a>
+	</li>
+	<li>
+		基礎課題２
+		※基礎課題１に検索機能を追加
+	</li>
+</ul>
 
 第7回 課題
 =======
