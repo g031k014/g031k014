@@ -19,7 +19,8 @@ class BoardsController extends AppController {
 	}
 
 	public function del($id){
-		$this->Board->del($this->Board->findById($id));
+		// $this->Board->del($this->Board->findById($id));
+		$this->Board->del($id);
 		$this->redirect(array("action" => "index"));
 	}
 
