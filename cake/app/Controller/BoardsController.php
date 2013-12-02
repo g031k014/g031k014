@@ -1,10 +1,32 @@
 <?php
 class BoardsController extends AppController {
 	public $name = 'Boards';
-	public $uses = array('Board');
-	public $layout = "board_layout";
-	//public $components = array('Debugkit.Toolbar');
+	public $uses = array('Board','User');
 	//public $autoRender = false;//デフォルトオフ
+	public $layout = "board_layout";//レイアウトを使う
+	//public $components = array('Debugkit.Toolbar');//デバッグキットを使う
+	
+	//認証周り
+	public $components = array(
+			'DebugKit.Toolbar', //デバッグきっと
+			'Auth' => array( //ログイン機能を利用する
+				'authenticate' => array(
+					'Form' => array(
+						'userModel' => 'User',
+						'fields' => array('username' => 'email','password' => 'password')
+					)
+				),
+				//ログイン後の移動先
+				'loginRedirect' => array('controller' => 'new_boards', 'action' => 'index'),
+				//ログアウト後の移動先
+				'logoutRedirect' => array('controller' => 'new_boards', 'action' => 'login'),
+				//ログインページのパス
+				'loginAction' => array('controller' => 'new_boards', 'action' => 'login'),
+				//未ログイン時のメッセージ
+				'authError' => 'あなたのお名前とパスワードを入力して下さい。',
+			)
+		);
+
 
 	public function index(){
 		$this->set('data', $this->Board->find('all'));
@@ -19,7 +41,7 @@ class BoardsController extends AppController {
 	}
 
 	public function del($id){
-		// $this->Board->del($this->Board->findById($id));
+		// $this->Board->del($this->Board->findById($id));//↓の行と同じ働き
 		$this->Board->del($id);
 		$this->redirect(array("action" => "index"));
 	}
