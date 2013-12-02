@@ -2,6 +2,7 @@
 
 	echo $this->Html->link('ログアウト',array('controller' => 'Boards', 'action' => 'login'));
 	echo $this->Html->tag('br');
+	echo $this->Html->tag('br');
 
 	echo $this->Html->link('投稿する', array('controller' => 'Boards', 'action' => 'create'));
 	echo $this->Html->tag('br');
