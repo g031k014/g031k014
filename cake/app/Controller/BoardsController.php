@@ -13,7 +13,7 @@ class BoardsController extends AppController {
                 'authenticate' => array(
                     'Form' => array(
                         'userModel' => 'User',
-                        'fields' => array('username' => 'email','password' => 'password')
+                        'fields' => array('username' => 'name','password' => 'password')
                     )
                 ),
                 //ログイン後の移動先
