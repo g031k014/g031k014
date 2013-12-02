@@ -16,7 +16,7 @@ g031k014
 	<li>
 		基礎課題１
 		<a href="http://49.212.46.130/~g031k014/cake/boards">動作ページ</a>
-		<a href="">コード</a>
+		<a href="https://github.com/g031k014/g031k014/blob/master/cake/app/Controller/BoardsController.php">コード</a>
 	</li>
 	<li>
 		基礎課題２
