@@ -10,7 +10,7 @@ g031k014
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
 
 
-第８回　課題
+第８回　課題（※全て同じソースコードです）
 ======
 <ul>
 	<li>
