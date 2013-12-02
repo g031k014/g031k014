@@ -26,34 +26,27 @@ class BoardsController extends AppController {
             )
         );
 
-
-	// public function index(){
-	// 	$this->set('data', $this->Board->find('all'));
-	// }
-
 	 public function index(){
-                if(!empty($this->request->data['Board']['words'])){
-                        $WORDS = $this->request->data['Board']['words'];
-                        $NUM = $this->request->data['Board']['num']+1;
-                        $conditions = array('conditions' => array("Board.comment LIKE" => "%$WORDS%"), 'limit' => $NUM);
-                        $this->Session->write("conditions", $conditions);
-                        $this->paginate = $conditions;
-                        $search = $this->paginate('Board');
-                        $this->set('data', $search);
-                }else{
-                        //$this->set('data', $this->Board->find('all'));
-                        if (empty($this->request->params['named']['page'])){
-                                $this->Session->delete('conditions');
-                        }
-                        if (!($this->Session->read('conditions'))){
-                                $this->set('data', $this->paginate('Board'));
-                        }else{
-                                $this->paginate = $this->Session->read('conditions');
-                                $this->set('data', $this->paginate('Board'));
-                        }
-                }
+            if(!empty($this->request->data['Board']['words'])){
+                $WORDS = $this->request->data['Board']['words'];
+                $NUM = $this->request->data['Board']['num']+1;
+                $conditions = array('conditions' => array("Board.comment LIKE" => "%$WORDS%"), 'limit' => $NUM);
+                $this->Session->write("conditions", $conditions);
+                $this->paginate = $conditions;
+                $search = $this->paginate('Board');
+                $this->set('data', $search);
+            }else{
+                    if (empty($this->request->params['named']['page'])){
+                            $this->Session->delete('conditions');
+                    }
+                    if (!($this->Session->read('conditions'))){
+                            $this->set('data', $this->paginate('Board'));
+                    }else{
+                            $this->paginate = $this->Session->read('conditions');
+                            $this->set('data', $this->paginate('Board'));
+                    }
+            }
         }
-
 
 	public function edit($id){
 		if(!empty($this->request->data)){//ポスト送信されたら  //※issetだと×
@@ -84,7 +77,7 @@ class BoardsController extends AppController {
 	public function beforeFilter(){//login処理の設定
              $this->Auth->allow('login','logout','useradd');//ログインしないで、アクセスできるアクションを登録する
              $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
-        }
+    }
 
 	public function login(){//ログイン
 			if ($this->Auth->user()){//リダイレクション（ログアウトせずに出ようとした場合）
@@ -123,7 +116,6 @@ class BoardsController extends AppController {
 				}else{
 					$this->Session->setFlash(__('登録できませんでした'));
 				}
-				
 			}else{
 				$this->Session->setFlash(__('パスワード確認の値が一致しません．'));
 			}

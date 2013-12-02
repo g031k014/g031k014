@@ -47,7 +47,7 @@
 					'action' => 'edit', 
 					$value["Board"]["id"]
 				)).' ';
-			echo $this->Html->link('削除', array(
+			echo $this->Html->link('×', array(
 					'action' => 'del', 
 					$value["Board"]["id"]
 				));
