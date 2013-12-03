@@ -19,5 +19,13 @@
 			$this->save($com);
 		}
 
+		public $validate = array(
+            'comment' => array(
+            	'rule' => 'alphaNumeric',
+                'required' => true,
+                'allowEmpty' => false,
+                'message' => '必ず入力して下さい'
+            )
+   	 );
 	}
 ?>

@@ -40,6 +40,7 @@ class BoardsController extends AppController {
                             $this->Session->delete('conditions');
                     }
                     if (!($this->Session->read('conditions'))){
+                    		$this->paginate =  array('limit' => 10);
                             $this->set('data', $this->paginate('Board'));
                     }else{
                             $this->paginate = $this->Session->read('conditions');
