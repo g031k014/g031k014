@@ -25,6 +25,7 @@
 	echo $this->Paginator->sort('id','ID').'　';//IDでソート
 	echo $this->Paginator->sort('created','Created');//時間でソート
 	echo $this->Html->tag('br');
+	echo '※クリックで昇順、降順を変えることができます';
 	echo $this->Html->tag('br');
 	echo $this->Html->link('元へ戻す', array('action' => 'index')).'　';
 	echo $this->Html->tag('br');
