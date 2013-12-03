@@ -9,7 +9,6 @@
 	echo $this->Html->tag('br');
 	echo $this->Html->tag('br');
 
-
 	echo $this->Form->create();
 	echo 'キーワード検索';
 	echo $this->Form->text('words');
@@ -21,9 +20,8 @@
 	echo $this->Form->end('検索');
 	echo $this->Html->tag('br');
 
-	echo 'ソート';
-	echo $this->Paginator->sort('id','ID').'　';//IDでソート
-	echo $this->Paginator->sort('created','Created');//時間でソート
+	echo $this->Paginator->sort('id','IDでソート').'　';//IDでソート
+	//echo $this->Paginator->sort('created','Created');//時間でソート
 	echo $this->Html->tag('br');
 	echo '※クリックで昇順、降順を変えることができます';
 	echo $this->Html->tag('br');
@@ -58,10 +56,10 @@
 
 		}
 	}
-	// echo $this->Paginator->prev(' << ' . __('前へ'), array(), null, array('class' => 'prev disabled'));
-	// echo ' '.$this->Paginator->numbers().' ';//ページにジャンプ
-	// echo $this->Paginator->next(' >> ' . __('次へ'), array(), null, array('class' => 'next disabled'));
-	// echo '   データ数['.$this->Paginator->params()["count"].']';//データ数表示
+	echo $this->Paginator->prev(' << ' . __('前へ'), array(), null, array('class' => 'prev disabled'));
+	echo ' '.$this->Paginator->numbers().' ';//ページにジャンプ
+	echo $this->Paginator->next(' >> ' . __('次へ'), array(), null, array('class' => 'next disabled'));
+	echo '   データ数['.$this->Paginator->params()["count"].']';//データ数表示
 
 	echo $this->Html->tag('br');
 	echo $this->Html->link('ログアウト', array('action' => 'logout'));
