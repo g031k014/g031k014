@@ -1,9 +1,9 @@
 <?php
 
 	//debug($data);//デバッグ
-	echo $this->Html->link('ログアウト',array('controller' => 'Boards', 'action' => 'logout'));
-	echo $this->Html->tag('br');
-	echo $this->Html->tag('br');
+	//echo $this->Html->link('ログアウト',array('controller' => 'Boards', 'action' => 'logout'));
+	// echo $this->Html->tag('br');
+	// echo $this->Html->tag('br');
 
 	echo $this->Html->link('投稿する', array('controller' => 'Boards', 'action' => 'create'));
 	echo $this->Html->tag('br');
@@ -26,14 +26,14 @@
 	echo $this->Paginator->sort('created','Created');//時間でソート
 	echo $this->Html->tag('br');
 	echo $this->Html->tag('br');
-	echo $this->Html->link('一覧に戻る',array('controller' => 'Boards', 'action' => 'index'));
+	echo $this->Html->link('元へ戻す', array('action' => 'index')).'　';
 	echo $this->Html->tag('br');
 	echo $this->Html->tag('br');
 
 	//var_dump($data);
 	foreach ($data as $key => $value) {
 		if(!empty($value["Board"]["comment"])){
-			//echo $value["Board"]["id"].' : ';
+			echo $value["Board"]["id"].' : ';
 			//投稿したコメントに投稿したユーザの名前とメアドを表示させる
 			echo 'ユーザ名：'.$value["User"]["name"].'　,　';
 			echo 'アドレス：'.$value["User"]["email"];
@@ -57,4 +57,11 @@
 
 		}
 	}
+	// echo $this->Paginator->prev(' << ' . __('前へ'), array(), null, array('class' => 'prev disabled'));
+	// echo ' '.$this->Paginator->numbers().' ';//ページにジャンプ
+	// echo $this->Paginator->next(' >> ' . __('次へ'), array(), null, array('class' => 'next disabled'));
+	// echo '   データ数['.$this->Paginator->params()["count"].']';//データ数表示
+
+	echo $this->Html->tag('br');
+	echo $this->Html->link('ログアウト', array('action' => 'logout'));
 ?>
