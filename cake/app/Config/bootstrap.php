@@ -110,3 +110,6 @@ CakeLog::config('error', array(
 CakePlugin::load('DebugKit');
 
 CakePlugin::load('BoostCake');
+
+/*TwitterKitの導入*/
+CakePlugin::load('TwitterKit');

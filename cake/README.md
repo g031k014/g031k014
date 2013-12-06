@@ -9,6 +9,23 @@ g031k014
 
 <a href="http://offsidenow.phpapps.jp/">演習課題</a>
 
+
+第10回 課題
+=======
+<ul>
+	<li>
+		基礎課題１
+		<a href="http://49.212.46.130/~g031k014/Github/g031k014/cake/tw_logins/login">動作ページ</a>
+		<a href="https://github.com/g031k014/g031k014/blob/master/cake/app/Controller/BoardsController.php">コード</a>
+		<br>
+	</li>
+	<li>
+		基礎課題２
+		※１と同じページです
+	</li>
+	
+</ul>
+
 第９回　課題（※全て同じソースコードです）
 ======
 <ul>

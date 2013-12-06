@@ -76,7 +76,7 @@ class BoardsController extends AppController {
 	}
 
 	public function beforeFilter(){//login処理の設定
-             $this->Auth->allow('login','logout','useradd');//ログインしないで、アクセスできるアクションを登録する
+             $this->Auth->allow('login','useradd');//ログインしないで、アクセスできるアクションを登録する
              $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
     }
 
@@ -102,6 +102,9 @@ class BoardsController extends AppController {
 	}
 
 	public function useradd(){
+		if ($this->Auth->user()){//リダイレクション（ログアウトせずに出ようとした場合）
+				$this->redirect(array('action' => 'index'));
+			}
 		//POST送信なら
 		if($this->request->is('post')) {
 			//パスワードとパスチェックの値をハッシュ値変換
