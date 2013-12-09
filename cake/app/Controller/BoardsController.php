@@ -26,6 +26,12 @@ class BoardsController extends AppController {
             )
         );
 
+	// public $pagenate = array(
+	// 	'limit' => 10,
+	// 	'order' =>array('Board.id' => 'asc')
+	// 	);
+
+
 	 public function index(){
             if(!empty($this->request->data['Board']['words'])){
                 $WORDS = $this->request->data['Board']['words'];

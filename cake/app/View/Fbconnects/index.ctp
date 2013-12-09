@@ -1,0 +1,1 @@
+<?php echo "<a href="facebook">facebook connect</a>" ?>

@@ -5,8 +5,8 @@
 		public $uses = array('NewUser'); //Userモデルを追加
 		/****認証周り*****/
 		public $components = array(
-			'DebugKit.Toolbar', //デバッグきっと
-			'TwitterKit.Twitter', //twitter
+			'DebugKit.Toolbar', //デバッグキット
+			'TwitterKit.Twitter', //twitterKitの読み込み
 			'Auth' => array( //ログイン機能を利用する
 				'authenticate' => array(
 					'Form' => array(
@@ -14,7 +14,7 @@
 					)
 				),
 				//ログイン後の移動先
-				'loginRedirect' => array('controller' => 'Tw_Logins', 'action' => 'index/'),
+				'loginRedirect' => array('controller' => 'boards', 'action' => 'index/'),//掲示板に飛ばすため、boards
 				//ログアウト後の移動先
 				'logoutRedirect' => array('controller' => 'Tw_Logins', 'action' => 'login'),
 				//ログインページのパス
@@ -28,13 +28,17 @@
 		 	$this->Auth->allow('twitter_login', 'login', 'oauth_callback');
 		 	$this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
 		}
+
+
 		public function twitter_login(){//twitterのOAuth用ログインURLにリダイレクト
         	$this->redirect($this->Twitter->getAuthenticateUrl(null, true));
     	}
 
     	//ログインアクション
 		public function login(){}
+
 		public function index(){}
+
 		public function logout(){
 			$this->Auth->logout();
 			$this->Session->destroy(); //セッションを完全削除
@@ -49,9 +53,14 @@
 	        }
 	        $this->Twitter->setTwitterSource('twitter');//アクセストークンの取得を実施
 	        $token = $this->Twitter->getAccessToken();
-	        $data['NewUser'] = $this->NewUser->signin($token); //ユーザ登録
-	        $this->Auth->login($data); //CakePHPのAuthログイン処理
+	        $data['User'] = $this->NewUser->signin($token); //ユーザ登録
+	        $data = $this->NewUser->find('first', array('conditions' => array("name" => $data['User']['name']),
+	        	"password" => $data['User']['password']));
+	        $this->Auth->login($data['NewUser']); //CakePHPのAuthログイン処理
+	        
+	        //debug($data['NewUser']);
 	        $this->redirect($this->Auth->loginRedirect); //ログイン後画面へリダイレクト
     	}
     }
 ?>
+
