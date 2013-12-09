@@ -2,7 +2,7 @@
 //facebook認証
 App::import('Vendor','facebook',array('file' => 'facebook'.DS.'src'.DS.'facebook.php'));
 
-class FbconnectController extends AppController {
+class FbconnectsController extends AppController {
     public $name = 'Fbconnect';
 
     function index(){}
