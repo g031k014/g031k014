@@ -1,12 +1,13 @@
 @charset "utf-8";
  
 body {
-    text-align: center;
+    /*text-align: center;*/
 	/*background-color: lavenderblush;*/
+	background-color: #ccffff;
 	font-style: fantasy;
+	background-position: right top;
+	background-repeat: no-repeat; 
 	background-image: url(http://pic.prepics-cdn.com/airin167/26526357.jpeg);
-	/*background-image: url(http://electro6290.kill.jp/viptoukei/tool/tenkin/f/bzhc1-k1SY.jpg);*/
-	/* ↑ふなっしーにゃっき */
 	font-family: cursive;
 }
 
