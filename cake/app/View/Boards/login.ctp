@@ -9,7 +9,7 @@
 	<?php echo $this->Form->create('TwLogins', array('action'=>'twitter_login'));?>
     <?php echo $this->Form->end(__('Twitter で Login'));?>
     <?php echo $this->Html->tag('br');?>
-    <?php echo $this->Form->create('TwLogins', array('action'=>'twitter_login'));?>
+    <?php echo $this->Form->create('fbconnects', array('action'=>'index'));?>
     <?php echo $this->Form->end(__('Facebook で Login'));?>
     <?php echo $this->Html->tag('br');?>
 	<a href="useradd" id="switch" class="label btn-primary">新規登録</a>

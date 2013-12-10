@@ -3,7 +3,7 @@ class BoardsController extends AppController {
 	public $name = 'Boards';
 	public $uses = array('Board','User');
 	//public $autoRender = false;//デフォルトオフ
-	//public $layout = "board_layout";//レイアウトを使う
+	public $layout = "board_layout";//レイアウトを使う
 	
 	//認証周り
 	public $components = array(
