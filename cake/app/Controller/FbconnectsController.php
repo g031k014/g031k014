@@ -5,6 +5,7 @@ App::import('Vendor','facebook',array('file' => 'facebook'.DS.'src'.DS.'facebook
 class FbconnectsController extends AppController {
     public $name = 'Fbconnects';
     public $uses = array('NewUser'); //Userモデルを追加
+    
     public $components = array(
             'DebugKit.Toolbar', //デバッグキット
             'Auth' => array( //ログイン機能を利用する
