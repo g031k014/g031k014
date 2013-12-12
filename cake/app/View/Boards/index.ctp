@@ -1,7 +1,6 @@
 <?php
 
 	//debug($data);//デバッグ
-	//echo $this->Html->link('ログアウト',array('controller' => 'Boards', 'action' => 'logout'));
 	echo $this->Html->link('ログアウト', array('action' => 'logout'));
 	echo $this->Html->tag('br');
 	
@@ -26,7 +25,6 @@
 	echo $this->Html->tag('br');
 
 	echo $this->Paginator->sort('id','IDでソート').'　';//IDでソート
-	//echo $this->Paginator->sort('created','Created');//時間でソート
 	echo $this->Html->tag('br');
 	echo '※クリックで昇順、降順を変えることができます';
 	echo $this->Html->tag('br');
