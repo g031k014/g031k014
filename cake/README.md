@@ -21,7 +21,7 @@ g031k014
 	</li>
 	<li>
 		基礎課題２
-		<a href="">動作ページ</a>
+		<a href="http://thoughtful-tiny-02.gopagoda.com/">動作ページ</a>
 		
 	</li>
 	
