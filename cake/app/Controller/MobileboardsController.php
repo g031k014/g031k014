@@ -39,12 +39,12 @@ class MobileboardsController extends AppController {
                     if (empty($this->request->params['named']['page'])){
                             $this->Session->delete('conditions');
                     }
-                    if (!($this->Session->read('conditions'))){
-                    		$this->paginate =  array('limit' => 10);
-                            $this->set('data', $this->paginate('Board'));
-                    }else{
-                            $this->paginate = $this->Session->read('conditions');
-                            $this->set('data', $this->paginate('Board'));
+                    if (!($this->Session->read('conditions')) && empty($this->request->params['named']['sort'])){//ソート、検索×
+                		$this->paginate =  array('limit' => 10, 'conditions' => 'order by Board.id desc');
+                        $this->set('data', $this->paginate('Board'));
+                    }else if (!($this->Session->read('conditions'))){//ソートのみ
+                    	$this->paginate =  array('limit' => 10);
+                        $this->set('data', $this->paginate('Board'));
                     }
             }
         }
@@ -65,17 +65,19 @@ class MobileboardsController extends AppController {
 	public function create(){
 		if(isset($this->request->data)){//ポスト送信されたら
 			$com = $this->request->data;
-			$this->set('com', $com);//ビューにunkonow値を受け渡す
+			$this->set('com', $com);//ビューに値を受け渡す
 		}
 	}
 
 	public function creatable(){
-		$this->request->data['Board']['user_id']=$this->Auth->user('id');
-		$this->Board->db_connect($this->request->data);
+		$this->request->data['Mobileboards']['user_id']=$this->Auth->user('id');
+		$data['Board'] = $this->request->data['Mobileboards'];
+		$this->Board->db_connect($data);
 		$this->redirect(array("action" => "index"));
 	}
 
 	public function beforeFilter(){//login処理の設定
+		
              $this->Auth->allow('login','useradd');//ログインしないで、アクセスできるアクションを登録する
              $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
     }

@@ -76,6 +76,11 @@ class BoardsController extends AppController {
 	}
 
 	public function beforeFilter(){//login処理の設定
+		if($this->request->is('mobile')){//ここのif文で、PCかモバイルかを判定し、レイアウトを変える
+		 //テーマをJqm、レイアウトをjqmに指定します。
+ 			$this->theme = 'jqm';
+ 			$this->layout = 'jqm';
+			}
              $this->Auth->allow('login','useradd');//ログインしないで、アクセスできるアクションを登録する
              $this->set('user',$this->Auth->user()); // ctpで$userを使えるようにする 。
     }

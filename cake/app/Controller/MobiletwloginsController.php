@@ -1,6 +1,6 @@
 <?php
-	class MobiletwLoginsController extends AppController {
-		public $name = 'MobiletwLogins';
+	class MobiletwloginsController extends AppController {
+		public $name = 'Mobiletwlogins';
 		//public $layout = "bootstrap"; //board.ctp レイアウトを利用
 		public $uses = array('NewUser'); //Userモデルを追加
 		/****認証周り*****/
@@ -14,11 +14,11 @@
 					)
 				),
 				//ログイン後の移動先
-				'loginRedirect' => array('controller' => 'Mobileboards', 'action' => 'index/'),//掲示板に飛ばすため、boards
+				'loginRedirect' => array('controller' => 'Mobileboards', 'action' => 'index/'),//掲示板に飛ばすため、mobileboards
 				//ログアウト後の移動先
-				'logoutRedirect' => array('controller' => 'mobiletw_Logins', 'action' => 'login'),
+				'logoutRedirect' => array('controller' => 'tw_Logins', 'action' => 'login'),
 				//ログインページのパス
-				'loginAction' => array('controller' => 'mobiletw_Logins', 'action' => 'login'),
+				'loginAction' => array('controller' => 'tw_Logins', 'action' => 'login'),
 				//未ログイン時のメッセージ
 				//'authError' => 'あなたのお名前とパスワードを入力して下さい。',
 			)
