@@ -27,24 +27,27 @@ class BoardsController extends AppController {
         );
 
 	 public function index(){
-            if(!empty($this->request->data['Board']['words'])){
-                $WORDS = $this->request->data['Board']['words'];
-                $NUM = $this->request->data['Board']['num']+1;
+            if(!empty($this->request->query['words'])){//検索
+                $WORDS = $this->request->query['words'];
+                $NUM = $this->request->query['num']+1;
                 $conditions = array('conditions' => array("Board.comment LIKE" => "%$WORDS%"), 'limit' => $NUM);
+               // var_dump($conditions);
                 $this->Session->write("conditions", $conditions);
                 $this->paginate = $conditions;
                 $search = $this->paginate('Board');
                 $this->set('data', $search);
+
+
             }else{
                     if (empty($this->request->params['named']['page'])){
                             $this->Session->delete('conditions');
                     }
-                    if (!($this->Session->read('conditions'))){
-                    		$this->paginate =  array('limit' => 10);
-                            $this->set('data', $this->paginate('Board'));
-                    }else{
-                            $this->paginate = $this->Session->read('conditions');
-                            $this->set('data', $this->paginate('Board'));
+                    if (!($this->Session->read('conditions')) && empty($this->request->params['named']['sort'])){//ソート、検索でもない
+                		$this->paginate =  array('limit' => 10, 'conditions' => 'order by Board.id desc');//デフォルトで降順表示
+                        $this->set('data', $this->paginate('Board'));
+                    }else if (!($this->Session->read('conditions'))){//ソートのみ
+                    	$this->paginate =  array('limit' => 10);
+                        $this->set('data', $this->paginate('Board'));
                     }
             }
         }

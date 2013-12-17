@@ -8,7 +8,8 @@
 	echo $this->Html->tag('br');
 	echo $this->Html->tag('br');
 
-	echo $this->Form->create();
+
+	echo $this->Form->create(array('type'=>'get'));
 	echo 'キーワード検索';
 	echo $this->Form->text('words');
 	echo $this->Html->tag('br');
@@ -16,15 +17,13 @@
 	$options = array(1,2,3,4,5,6,7,8,9,10);
 	echo $this->Form->select('num', $options, array('empty' => false));
 	echo $this->Html->tag('br');
-	//echo $this->Form->button('test', array('class'=>'btn btn-primary'));
 	echo $this->Form->end('検索', array('class'=>'label btn-primary', 'type'=>'button'));
 	echo $this->Html->tag('br');
-
 	echo '※Twitterでログインした場合は、アドレスが表示されません。';
 	echo $this->Html->tag('br');
 	echo $this->Html->tag('br');
-
-	echo $this->Paginator->sort('id','IDでソート').'　';//IDでソート
+	//echo $this->Paginator->sort('id','IDでソート').'　';//IDでソート
+	echo $this->Paginator->sort('id', 'IDでソート', array('direction' => 'asc'));
 	echo $this->Html->tag('br');
 	echo '※クリックで昇順、降順を変えることができます';
 	echo $this->Html->tag('br');
