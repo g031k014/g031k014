@@ -28,7 +28,7 @@
 
 <body>
 
-<div data-role="page" data-theme="b">
+<div data-role="page" data-theme="e">
 
  <div data-role="header" data-theme="b">
 
@@ -45,7 +45,7 @@
 
  </div><!-- /content -->
 
- <div data-role="footer" data-theme="b">
+ <div data-role="footer" data-theme="a">
 
  <h4>Mobile Version</h4>
 
