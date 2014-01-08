@@ -28,7 +28,7 @@
 
 <body>
 
-<div data-role="page" data-theme="d">
+<div data-role="page" data-theme="g">
 
  <div data-role="header" data-theme="b">
 
